@@ -1,100 +1,798 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#e5eaf8">
+  <meta name="theme-color" content="#09090f">
+  <meta name="description" content="Raiyaan Khan's personal portfolio, skills and projects.">
   <title>Raiyaan Khan | Portfolio</title>
+
   <style>
-    :root { --purple:#6857f5; --ink:#252737; --muted:#707789; --bg:#e5eaf8; }
-    * { box-sizing:border-box; }
-    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--ink); background:var(--bg); }
-    .wrap { max-width:760px; margin:0 auto; padding:30px 18px 60px; }
-    .hero { text-align:center; padding:20px 8px 24px; }
-    .avatar { width:154px; height:154px; margin:0 auto 24px; border:6px solid var(--purple); border-radius:50%; padding:5px; background:#fff; }
-    .avatar img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
-    h1 { margin:0; font-size:clamp(25px,5vw,34px); }
-    .verified { color:#2799e8; font-size:.75em; vertical-align:middle; }
-    .tag { color:#48b7d7; margin:8px 0 20px; font-size:14px; }
-    .socials { display:flex; justify-content:center; gap:22px; margin:20px 0 42px; }
-    .socials a { color:var(--purple); font-size:25px; text-decoration:none; font-weight:bold; }
-    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; max-width:490px; margin:0 auto 36px; }
-    .stat strong { display:block; font-size:20px; margin-bottom:10px; }
-    .stat span { color:var(--muted); line-height:1.5; font-size:15px; }
-    .actions { display:flex; justify-content:center; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:28px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:64px; padding:0 28px; border-radius:14px; text-decoration:none; color:#fff; background:var(--purple); box-shadow:0 12px 28px #6857f533; }
-    .icon-btn { display:inline-flex; align-items:center; justify-content:center; width:60px; height:60px; border-radius:14px; background:#f0f2f9; color:var(--ink); text-decoration:none; font-size:23px; }
-    audio { width:100%; max-width:480px; display:block; margin:0 auto 42px; }
-    .tabs { display:grid; grid-template-columns:1fr 1fr; gap:6px; background:var(--purple); border-radius:18px; padding:8px; margin-bottom:30px; }
-    .tab { border:0; padding:17px 10px; border-radius:13px; background:transparent; font-size:16px; color:#17182a; cursor:pointer; }
-    .tab.active { background:#e5eaf8; }
-    .cards { display:grid; grid-template-columns:1fr; gap:18px; }
-    .card { background:#f6f7fb; border-radius:22px; overflow:hidden; }
-    .card img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:#d7dcec; }
-    .card-content { padding:18px; }
-    .card h2 { margin:0 0 8px; font-size:20px; }
-    .card p { color:var(--muted); line-height:1.6; margin:0; }
-    footer { text-align:center; color:var(--muted); font-size:13px; margin-top:35px; }
-    @media (min-width:620px) { .cards { grid-template-columns:1fr 1fr; } .hero { padding-top:35px; } }
+    :root {
+      --bg: #09090f;
+      --panel: #12121d;
+      --purple: #8b5cf6;
+      --pink: #c084fc;
+      --text: #f5f3ff;
+      --muted: #a5a1b8;
+      --border: rgba(167, 139, 250, .19);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(ellipse at 50% 0%, #241344 0%, transparent 48%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 32px, 1000px);
+      margin: auto;
+    }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(9, 9, 15, .85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.6px;
+    }
+
+    .logo span {
+      color: var(--pink);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--pink);
+    }
+
+    .nav-cta {
+      background: var(--purple);
+      color: white !important;
+      padding: 10px 16px;
+      border-radius: 10px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 76px 0 54px;
+      text-align: center;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      background: rgba(139, 92, 246, .09);
+      color: #d8c6ff;
+      padding: 7px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 26px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #4ade80;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #4ade80;
+    }
+
+    .avatar {
+      width: 172px;
+      height: 172px;
+      margin: 0 auto 25px;
+      border-radius: 50%;
+      padding: 5px;
+      background: linear-gradient(135deg, #a78bfa, #6d28d9, #ec4899);
+      box-shadow: 0 0 35px rgba(139, 92, 246, .3);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .avatar img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 4px solid var(--bg);
+    }
+
+    h1 {
+      font-size: clamp(34px, 7vw, 58px);
+      line-height: 1.15;
+      letter-spacing: -1.8px;
+      margin-bottom: 12px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #c4b5fd, #a78bfa, #f0abfc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: clamp(15px, 3vw, 18px);
+      margin: 0 auto 25px;
+    }
+
+    .typing {
+      color: var(--pink);
+      font-weight: 700;
+    }
+
+    .cursor {
+      animation: blink .8s infinite;
+    }
+
+    .intro {
+      color: #c0bbd2;
+      max-width: 570px;
+      margin: 0 auto 28px;
+      font-size: 15px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 12px 21px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 14px;
+      font-weight: 700;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+      border-color: transparent;
+      box-shadow: 0 8px 28px rgba(139, 92, 246, .23);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, .03);
+    }
+
+    /* Social links */
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .socials a {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--panel);
+      color: #c4b5fd;
+      font-size: 14px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .socials a:hover {
+      background: var(--purple);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Sections */
+    section.content-section {
+      padding: 40px 0;
+      scroll-margin-top: 82px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--pink);
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 5vw, 36px);
+      letter-spacing: -.7px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    /* Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 21px 8px;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      background: linear-gradient(145deg, #171323, #101018);
+    }
+
+    .stat strong {
+      display: block;
+      color: #c4b5fd;
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* About */
+    .about-card {
+      max-width: 760px;
+      margin: auto;
+      padding: 25px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    .about-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .chip {
+      color: #d8c6ff;
+      background: rgba(139, 92, 246, .12);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+
+    /* Tabs and cards */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .tab {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 11px 24px;
+      color: var(--muted);
+      background: var(--panel);
+    }
+
+    .tab.active {
+      background: var(--purple);
+      color: white;
+      border-color: var(--purple);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: linear-gradient(145deg, #171522, #101018);
+      transition: transform .25s, border-color .25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(167, 139, 250, .6);
+    }
+
+    .project-visual {
+      min-height: 130px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 50%, #50308c 0%, #21153c 42%, #15111f 100%);
+      font-size: 38px;
+    }
+
+    .card-body {
+      padding: 19px;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .card-tag {
+      display: inline-block;
+      color: #c4b5fd;
+      font-size: 11px;
+      margin-top: 14px;
+      background: rgba(139, 92, 246, .12);
+      padding: 5px 9px;
+      border-radius: 20px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    /* Contact */
+    .contact-box {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+      padding: 35px 22px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: radial-gradient(ellipse at top, #271648, #12121d 70%);
+    }
+
+    .contact-box h2 {
+      font-size: clamp(25px, 5vw, 34px);
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      margin-top: 35px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer span {
+      color: #c4b5fd;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .nav { min-height: 62px; }
+      .logo { font-size: 17px; }
+      .nav-links { gap: 13px; font-size: 12px; }
+      .nav-links .optional { display: none; }
+      .nav-cta { padding: 8px 11px; }
+      .hero { padding-top: 53px; }
+      .avatar { width: 150px; height: 150px; }
+      .stats { gap: 8px; }
+      .stat { padding: 17px 5px; }
+      .stat strong { font-size: 20px; }
+      .stat span { font-size: 11px; }
+      .cards { grid-template-columns: 1fr; }
+      .project-visual { min-height: 110px; }
+      section.content-section { padding: 30px 0; }
+      .about-card { padding: 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <div class="avatar"><img src="profile.jpg" alt="Raiyaan Khan profile photo"></div>
-      <h1>Raiyaan Khan <span class="verified" title="Profile badge">✦</span></h1>
-      <p class="tag">Personal Portfolio</p>
-      <nav class="socials" aria-label="Social links">
-        <a href="https://instagram.com/" aria-label="Instagram">◎</a>
-        <a href="https://facebook.com/" aria-label="Facebook">f</a>
-        <a href="https://github.com/" aria-label="GitHub">⌘</a>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home">RAIYAAN<span>.</span></a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a class="optional" href="#skills">Skills</a>
+        <a class="nav-cta" href="#contact">Contact</a>
       </nav>
-      <section class="stats" aria-label="Profile statistics">
-        <div class="stat"><strong>My</strong><span>Journey</span></div>
-        <div class="stat"><strong>Online</strong><span>Presence</span></div>
-        <div class="stat"><strong>100%</strong><span>Dedication</span></div>
-      </section>
-      <div class="actions">
-        <a class="btn" href="https://facebook.com/">Facebook</a>
-        <a class="icon-btn" href="https://m.me/" aria-label="Messenger">☏</a>
-        <a class="icon-btn" href="https://wa.me/" aria-label="WhatsApp">◉</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="status">
+        <span class="status-dot"></span>
+        Welcome to my portfolio
       </div>
-      <!-- Optional: add your own audio file as music.mp3 in the same repository -->
-      <audio controls preload="none">
-        <source src="music.mp3" type="audio/mpeg">
-        Your browser does not support audio playback.
-      </audio>
+
+      <div class="avatar">
+        <img
+          src="IMG-20261027-WA0214.jpg"
+          alt="Raiyaan Khan profile photo"
+          onerror="this.style.opacity='.25'; this.alt='Profile photo unavailable';"
+        >
+      </div>
+
+      <h1>Hi, I'm <span class="gradient-text">Raiyaan Khan</span></h1>
+
+      <p class="subtitle">
+        I'm a <span class="typing" id="typing">Creative Learner</span><span class="cursor">|</span>
+      </p>
+
+      <p class="intro">
+        Welcome to my personal space on the internet.
+        Explore my journey, skills and creative projects.
+        Thanks for visiting!
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#projects">✦ Explore My Work</a>
+        <a class="btn btn-secondary" href="#contact">Let's Connect ↗</a>
+      </div>
+
+      <div class="socials" aria-label="Social media links">
+        <!-- Replace these links with your real profile URLs -->
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+        <a href="https://github.com/raiyaankham887-maker" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GH</a>
+      </div>
     </section>
 
-    <div class="tabs" role="tablist" aria-label="Portfolio sections">
-      <button class="tab active" id="projectsTab" role="tab" aria-selected="true">Projects</button>
-      <button class="tab" id="skillsTab" role="tab" aria-selected="false">Skills</button>
-    </div>
-    <section class="cards" id="content" aria-live="polite">
-      <article class="card">
-        <img src="project.jpg" alt="Project preview">
-        <div class="card-content"><h2>My Project</h2><p>Add a short description of your work here.</p></div>
-      </article>
-      <article class="card">
-        <img src="project2.jpg" alt="Second project preview">
-        <div class="card-content"><h2>Creative Work</h2><p>Showcase your best work, website, or design.</p></div>
-      </article>
+    <section class="container content-section" aria-label="Highlights">
+      <div class="stats">
+        <div class="stat">
+          <strong>01</strong>
+          <span>My Portfolio</span>
+        </div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>Dedication</span>
+        </div>
+        <div class="stat">
+          <strong>∞</strong>
+          <span>Learning</span>
+        </div>
+      </div>
     </section>
-    <footer>© <span id="year"></span> Raiyaan Khan · Personal Portfolio</footer>
+
+    <section class="container content-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">Get to know me</p>
+        <h2>About <span class="gradient-text">Me</span></h2>
+        <p>A little introduction about myself.</p>
+      </div>
+
+      <div class="about-card">
+        <h3>Hey, I'm Raiyaan 👋</h3>
+        <p>
+          This is my personal portfolio where I share my interests,
+          learning journey and projects. I'm exploring the world of
+          technology and creative web design, one step at a time.
+        </p>
+
+        <div class="chips">
+          <span class="chip">💻 Technology</span>
+          <span class="chip">🎨 Creativity</span>
+          <span class="chip">🚀 Learning</span>
+          <span class="chip">✨ New Ideas</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container content-section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">What I do</p>
+        <h2>My <span class="gradient-text">Work</span></h2>
+        <p>Explore my projects and skills.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Portfolio categories">
+        <button class="tab active" id="projectsTab"
+          role="tab" aria-selected="true" aria-controls="content">
+          🚀 Projects
+        </button>
+        <button class="tab" id="skillsTab"
+          role="tab" aria-selected="false" aria-controls="content">
+          ⚡ Skills
+        </button>
+      </div>
+
+      <div class="cards" id="content" aria-live="polite">
+        <article class="card">
+          <div class="project-visual" aria-hidden="true">🌐</div>
+          <div class="card-body">
+            <h3>Personal Portfolio</h3>
+            <p>A personal website built to introduce myself and share my online presence.</p>
+            <span class="card-tag">HTML · CSS · JavaScript</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="project-visual" aria-hidden="true">💡</div>
+          <div class="card-body">
+            <h3>Creative Ideas</h3>
+            <p>A space for my future experiments, creative work and new projects.</p>
+            <span class="card-tag">Learning · Creativity</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container content-section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">My interests</p>
+        <h2>Growing My <span class="gradient-text">Skills</span></h2>
+        <p>Skills and tools I'm exploring.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-body">
+            <h3>💻 HTML & CSS</h3>
+            <p>Learning to structure and style modern, responsive websites.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>⚙️ JavaScript</h3>
+            <p>Exploring interactive features and useful website functionality.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>🎨 Web Design</h3>
+            <p>Exploring layouts, colors, typography and visual presentation.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3>📱 Responsive Design</h3>
+            <p>Learning to make websites work well on phones and computers.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container content-section" id="contact">
+      <div class="contact-box">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let's <span class="gradient-text">Connect!</span></h2>
+        <p>Want to visit my profiles? Find me on social media.</p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary"
+            href="https://facebook.com/"
+            target="_blank" rel="noopener noreferrer">
+            Facebook ↗
+          </a>
+
+          <a class="btn btn-secondary"
+            href="https://wa.me/"
+            target="_blank" rel="noopener noreferrer">
+            WhatsApp ↗
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="container">
+      Made with <span>♥</span> by Raiyaan Khan · ©
+      <span id="year"></span> All rights reserved.
+    </div>
+  </footer>
+
   <script>
-    const projects = `
-      <article class="card"><img src="project.jpg" alt="Project preview"><div class="card-content"><h2>My Project</h2><p>Add a short description of your work here.</p></div></article>
-      <article class="card"><img src="project2.jpg" alt="Second project preview"><div class="card-content"><h2>Creative Work</h2><p>Showcase your best work, website, or design.</p></div></article>`;
-    const skills = `
-      <article class="card"><div class="card-content"><h2>Web Design</h2><p>Describe your design skills and experience.</p></div></article>
-      <article class="card"><div class="card-content"><h2>Creative Projects</h2><p>Add the tools and skills you are learning.</p></div></article>`;
-    const content = document.getElementById('content');
-    const pTab = document.getElementById('projectsTab');
-    const sTab = document.getElementById('skillsTab');
-    pTab.addEventListener('click', () => { content.innerHTML = projects; pTab.classList.add('active'); sTab.classList.remove('active'); pTab.setAttribute('aria-selected','true'); sTab.setAttribute('aria-selected','false'); });
-    sTab.addEventListener('click', () => { content.innerHTML = skills; sTab.classList.add('active'); pTab.classList.remove('active'); sTab.setAttribute('aria-selected','true'); pTab.setAttribute('aria-selected','false'); });
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Automatically update the year.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Typing animation.
+    const words = [
+      "Creative Learner",
+      "Future Developer",
+      "Tech Enthusiast"
+    ];
+
+    const typing = document.getElementById("typing");
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeEffect() {
+      const word = words[wordIndex];
+
+      typing.textContent = deleting
+        ? word.slice(0, charIndex - 1)
+        : word.slice(0, charIndex + 1);
+
+      charIndex += deleting ? -1 : 1;
+
+      let delay = deleting ? 55 : 100;
+
+      if (!deleting && charIndex === word.length) {
+        deleting = true;
+        delay = 1300;
+      } else if (deleting && charIndex === 0) {
+        deleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        delay = 350;
+      }
+
+      window.setTimeout(typeEffect, delay);
+    }
+
+    typeEffect();
+
+    // Projects and Skills tabs.
+    const projectsTab = document.getElementById("projectsTab");
+    const skillsTab = document.getElementById("skillsTab");
+    const content = document.getElementById("content");
+
+    const projectsHTML = content.innerHTML;
+
+    const skillsHTML = `
+      <article class="card">
+        <div class="project-visual" aria-hidden="true">💻</div>
+        <div class="card-body">
+          <h3>HTML & CSS</h3>
+          <p>Learning to build and style responsive web pages.</p>
+          <span class="card-tag">Web Development</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="project-visual" aria-hidden="true">⚡</div>
+        <div class="card-body">
+          <h3>JavaScript</h3>
+          <p>Exploring interactive website features and animations.</p>
+          <span class="card-tag">Programming</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="project-visual" aria-hidden="true">🎨</div>
+        <div class="card-body">
+          <h3>Creative Design</h3>
+          <p>Experimenting with modern colors, layouts and visual ideas.</p>
+          <span class="card-tag">Design</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="project-visual" aria-hidden="true">📱</div>
+        <div class="card-body">
+          <h3>Responsive Websites</h3>
+          <p>Learning to create websites for mobile and desktop screens.</p>
+          <span class="card-tag">Responsive Design</span>
+        </div>
+      </article>
+    `;
+
+    function setTab(showSkills) {
+      content.innerHTML = showSkills ? skillsHTML : projectsHTML;
+
+      skillsTab.classList.toggle("active", showSkills);
+      projectsTab.classList.toggle("active", !showSkills);
+
+      skillsTab.setAttribute("aria-selected", String(showSkills));
+      projectsTab.setAttribute("aria-selected", String(!showSkills));
+    }
+
+    projectsTab.addEventListener("click", () => setTab(false));
+    skillsTab.addEventListener("click", () => setTab(true));
   </script>
 </body>
 </html>
