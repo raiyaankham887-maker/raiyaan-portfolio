@@ -25,9 +25,7 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -44,16 +42,13 @@
       text-decoration: none;
     }
 
-    button {
-      font: inherit;
-    }
+    button { font: inherit; }
 
     .container {
       width: min(100% - 32px, 1000px);
       margin: auto;
     }
 
-    /* Navigation */
     header {
       position: sticky;
       top: 0;
@@ -77,9 +72,7 @@
       letter-spacing: -.6px;
     }
 
-    .logo span {
-      color: var(--pink);
-    }
+    .logo span { color: var(--pink); }
 
     .nav-links {
       display: flex;
@@ -89,9 +82,7 @@
       color: var(--muted);
     }
 
-    .nav-links a:hover {
-      color: var(--pink);
-    }
+    .nav-links a:hover { color: var(--pink); }
 
     .nav-cta {
       background: var(--purple);
@@ -100,7 +91,6 @@
       border-radius: 10px;
     }
 
-    /* Hero */
     .hero {
       padding: 76px 0 54px;
       text-align: center;
@@ -173,9 +163,7 @@
       font-weight: 700;
     }
 
-    .cursor {
-      animation: blink .8s infinite;
-    }
+    .cursor { animation: blink .8s infinite; }
 
     .intro {
       color: #c0bbd2;
@@ -205,9 +193,7 @@
       transition: transform .2s, box-shadow .2s;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-    }
+    .btn:hover { transform: translateY(-3px); }
 
     .btn-primary {
       background: linear-gradient(135deg, #8b5cf6, #6d28d9);
@@ -215,11 +201,8 @@
       box-shadow: 0 8px 28px rgba(139, 92, 246, .23);
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, .03);
-    }
+    .btn-secondary { background: rgba(255, 255, 255, .03); }
 
-    /* Social links */
     .socials {
       display: flex;
       justify-content: center;
@@ -247,7 +230,6 @@
       transform: translateY(-3px);
     }
 
-    /* Sections */
     section.content-section {
       padding: 40px 0;
       scroll-margin-top: 82px;
@@ -278,7 +260,6 @@
       margin-top: 8px;
     }
 
-    /* Stats */
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -307,7 +288,6 @@
       font-size: 12px;
     }
 
-    /* About */
     .about-card {
       max-width: 760px;
       margin: auto;
@@ -343,7 +323,6 @@
       font-size: 12px;
     }
 
-    /* Tabs and cards */
     .tabs {
       display: flex;
       justify-content: center;
@@ -389,14 +368,11 @@
       min-height: 130px;
       display: grid;
       place-items: center;
-      background:
-        radial-gradient(circle at 50% 50%, #50308c 0%, #21153c 42%, #15111f 100%);
+      background: radial-gradient(circle at 50% 50%, #50308c 0%, #21153c 42%, #15111f 100%);
       font-size: 38px;
     }
 
-    .card-body {
-      padding: 19px;
-    }
+    .card-body { padding: 19px; }
 
     .card h3 {
       font-size: 17px;
@@ -419,11 +395,8 @@
       border-radius: 20px;
     }
 
-    .hidden {
-      display: none !important;
-    }
+    .hidden { display: none !important; }
 
-    /* Contact */
     .contact-box {
       text-align: center;
       max-width: 700px;
@@ -454,9 +427,7 @@
       font-size: 12px;
     }
 
-    footer span {
-      color: #c4b5fd;
-    }
+    footer span { color: #c4b5fd; }
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
@@ -698,11 +669,9 @@
   </footer>
 
   <script>
-    // Automatically update the year.
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-    // Typing animation.
     const words = [
       "Creative Learner",
       "Future Developer",
@@ -722,7 +691,6 @@
         : word.slice(0, charIndex + 1);
 
       charIndex += deleting ? -1 : 1;
-
       let delay = deleting ? 55 : 100;
 
       if (!deleting && charIndex === word.length) {
@@ -739,7 +707,6 @@
 
     typeEffect();
 
-    // Projects and Skills tabs.
     const projectsTab = document.getElementById("projectsTab");
     const skillsTab = document.getElementById("skillsTab");
     const content = document.getElementById("content");
