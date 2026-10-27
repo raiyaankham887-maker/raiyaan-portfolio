@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e5eaf8">
+  <title>Raiyaan Khan | Portfolio</title>
+  <style>
+    :root { --purple:#6857f5; --ink:#252737; --muted:#707789; --bg:#e5eaf8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--ink); background:var(--bg); }
+    .wrap { max-width:760px; margin:0 auto; padding:30px 18px 60px; }
+    .hero { text-align:center; padding:20px 8px 24px; }
+    .avatar { width:154px; height:154px; margin:0 auto 24px; border:6px solid var(--purple); border-radius:50%; padding:5px; background:#fff; }
+    .avatar img { width:100%; height:100%; object-fit:cover; border-radius:50%; }
+    h1 { margin:0; font-size:clamp(25px,5vw,34px); }
+    .verified { color:#2799e8; font-size:.75em; vertical-align:middle; }
+    .tag { color:#48b7d7; margin:8px 0 20px; font-size:14px; }
+    .socials { display:flex; justify-content:center; gap:22px; margin:20px 0 42px; }
+    .socials a { color:var(--purple); font-size:25px; text-decoration:none; font-weight:bold; }
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; max-width:490px; margin:0 auto 36px; }
+    .stat strong { display:block; font-size:20px; margin-bottom:10px; }
+    .stat span { color:var(--muted); line-height:1.5; font-size:15px; }
+    .actions { display:flex; justify-content:center; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:28px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:64px; padding:0 28px; border-radius:14px; text-decoration:none; color:#fff; background:var(--purple); box-shadow:0 12px 28px #6857f533; }
+    .icon-btn { display:inline-flex; align-items:center; justify-content:center; width:60px; height:60px; border-radius:14px; background:#f0f2f9; color:var(--ink); text-decoration:none; font-size:23px; }
+    audio { width:100%; max-width:480px; display:block; margin:0 auto 42px; }
+    .tabs { display:grid; grid-template-columns:1fr 1fr; gap:6px; background:var(--purple); border-radius:18px; padding:8px; margin-bottom:30px; }
+    .tab { border:0; padding:17px 10px; border-radius:13px; background:transparent; font-size:16px; color:#17182a; cursor:pointer; }
+    .tab.active { background:#e5eaf8; }
+    .cards { display:grid; grid-template-columns:1fr; gap:18px; }
+    .card { background:#f6f7fb; border-radius:22px; overflow:hidden; }
+    .card img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:#d7dcec; }
+    .card-content { padding:18px; }
+    .card h2 { margin:0 0 8px; font-size:20px; }
+    .card p { color:var(--muted); line-height:1.6; margin:0; }
+    footer { text-align:center; color:var(--muted); font-size:13px; margin-top:35px; }
+    @media (min-width:620px) { .cards { grid-template-columns:1fr 1fr; } .hero { padding-top:35px; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="avatar"><img src="profile.jpg" alt="Raiyaan Khan profile photo"></div>
+      <h1>Raiyaan Khan <span class="verified" title="Profile badge">✦</span></h1>
+      <p class="tag">Personal Portfolio</p>
+      <nav class="socials" aria-label="Social links">
+        <a href="https://instagram.com/" aria-label="Instagram">◎</a>
+        <a href="https://facebook.com/" aria-label="Facebook">f</a>
+        <a href="https://github.com/" aria-label="GitHub">⌘</a>
+      </nav>
+      <section class="stats" aria-label="Profile statistics">
+        <div class="stat"><strong>My</strong><span>Journey</span></div>
+        <div class="stat"><strong>Online</strong><span>Presence</span></div>
+        <div class="stat"><strong>100%</strong><span>Dedication</span></div>
+      </section>
+      <div class="actions">
+        <a class="btn" href="https://facebook.com/">Facebook</a>
+        <a class="icon-btn" href="https://m.me/" aria-label="Messenger">☏</a>
+        <a class="icon-btn" href="https://wa.me/" aria-label="WhatsApp">◉</a>
+      </div>
+      <!-- Optional: add your own audio file as music.mp3 in the same repository -->
+      <audio controls preload="none">
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+      </audio>
+    </section>
+
+    <div class="tabs" role="tablist" aria-label="Portfolio sections">
+      <button class="tab active" id="projectsTab" role="tab" aria-selected="true">Projects</button>
+      <button class="tab" id="skillsTab" role="tab" aria-selected="false">Skills</button>
+    </div>
+    <section class="cards" id="content" aria-live="polite">
+      <article class="card">
+        <img src="project.jpg" alt="Project preview">
+        <div class="card-content"><h2>My Project</h2><p>Add a short description of your work here.</p></div>
+      </article>
+      <article class="card">
+        <img src="project2.jpg" alt="Second project preview">
+        <div class="card-content"><h2>Creative Work</h2><p>Showcase your best work, website, or design.</p></div>
+      </article>
+    </section>
+    <footer>© <span id="year"></span> Raiyaan Khan · Personal Portfolio</footer>
+  </main>
+  <script>
+    const projects = `
+      <article class="card"><img src="project.jpg" alt="Project preview"><div class="card-content"><h2>My Project</h2><p>Add a short description of your work here.</p></div></article>
+      <article class="card"><img src="project2.jpg" alt="Second project preview"><div class="card-content"><h2>Creative Work</h2><p>Showcase your best work, website, or design.</p></div></article>`;
+    const skills = `
+      <article class="card"><div class="card-content"><h2>Web Design</h2><p>Describe your design skills and experience.</p></div></article>
+      <article class="card"><div class="card-content"><h2>Creative Projects</h2><p>Add the tools and skills you are learning.</p></div></article>`;
+    const content = document.getElementById('content');
+    const pTab = document.getElementById('projectsTab');
+    const sTab = document.getElementById('skillsTab');
+    pTab.addEventListener('click', () => { content.innerHTML = projects; pTab.classList.add('active'); sTab.classList.remove('active'); pTab.setAttribute('aria-selected','true'); sTab.setAttribute('aria-selected','false'); });
+    sTab.addEventListener('click', () => { content.innerHTML = skills; sTab.classList.add('active'); pTab.classList.remove('active'); sTab.setAttribute('aria-selected','true'); pTab.setAttribute('aria-selected','false'); });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
