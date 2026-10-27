@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#09090f">
-  <meta name="description" content="Raiyaan Khan - Facebook and Instagram account recovery guidance, Meta Verified information, online digital services and clothing shop.">
-  <title>Raiyaan Khan | Digital Services & Clothing</title>
+  <meta name="theme-color" content="#090711">
+  <meta name="description" content="Raiyaan Khan — Digital Services, Facebook and Instagram account support, Meta Verified guidance and clothing collection.">
+  <title>Raiyaan Khan | Digital Services</title>
 
   <style>
     :root {
-      --bg: #09090f;
-      --panel: #151321;
+      --bg: #090711;
+      --panel: #151124;
       --purple: #8b5cf6;
       --pink: #e879f9;
-      --text: #f5f3ff;
-      --muted: #b5aec9;
-      --border: rgba(167,139,250,.23);
-      --green: #16864a;
+      --text: #f8f5ff;
+      --muted: #b8b0cb;
+      --border: rgba(183, 148, 255, .22);
+      --green: #20b968;
     }
 
     * {
@@ -33,11 +33,11 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(ellipse at 50% 0%, #281344 0%, transparent 48%),
-        var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      background:
+        radial-gradient(ellipse at 50% 0%, #321653 0%, transparent 48%),
+        var(--bg);
+      line-height: 1.75;
     }
 
     a {
@@ -48,16 +48,16 @@
     button { font: inherit; }
 
     .container {
-      width: min(100% - 32px, 1050px);
-      margin: auto;
+      width: min(100% - 30px, 1060px);
+      margin-inline: auto;
     }
 
     header {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(9,9,15,.94);
-      backdrop-filter: blur(14px);
+      z-index: 100;
+      background: rgba(9, 7, 17, .94);
+      backdrop-filter: blur(15px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -66,221 +66,262 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
+      gap: 12px;
     }
 
     .logo {
       font-size: 20px;
       font-weight: 900;
+      letter-spacing: -.5px;
       white-space: nowrap;
     }
 
-    .logo span { color: var(--pink); }
+    .logo span,
+    .gradient {
+      background: linear-gradient(90deg, #c4b5fd, #e879f9);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 18px;
-      font-size: 13px;
+      gap: 17px;
       color: var(--muted);
+      font-size: 13px;
     }
 
     .nav-links a:hover { color: var(--pink); }
 
-    .nav-cta {
+    .nav-links .nav-button {
       padding: 9px 13px;
-      background: var(--purple);
       border-radius: 10px;
-      color: white !important;
+      background: var(--purple);
+      color: white;
+      font-weight: bold;
     }
 
     .hero {
+      padding: 42px 0 36px;
       text-align: center;
-      padding: 55px 0 38px;
     }
 
-    .status {
-      display: inline-block;
-      padding: 7px 14px;
-      margin-bottom: 24px;
-      background: #211535;
+    .top-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       border: 1px solid var(--border);
       border-radius: 30px;
-      color: #e0d1ff;
+      background: #21152f;
+      padding: 7px 13px;
+      color: #e1d2ff;
       font-size: 12px;
+      margin-bottom: 22px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 10px #4ade80;
     }
 
     .avatar {
-      width: 150px;
-      height: 150px;
-      margin: 0 auto 23px;
+      width: 140px;
+      height: 140px;
       padding: 5px;
+      margin: 0 auto 21px;
       border-radius: 50%;
-      background: linear-gradient(135deg,#a78bfa,#7c3aed,#ec4899);
-      box-shadow: 0 0 32px #8b5cf64d;
+      background: linear-gradient(135deg, #a78bfa, #7c3aed, #ec4899);
+      box-shadow: 0 0 35px #8b5cf644;
     }
 
     .avatar img {
+      display: block;
       width: 100%;
       height: 100%;
-      display: block;
-      border-radius: 50%;
       object-fit: cover;
+      border-radius: 50%;
       border: 4px solid var(--bg);
     }
 
     h1 {
-      font-size: clamp(32px,6vw,55px);
+      font-size: clamp(32px, 7vw, 55px);
       line-height: 1.2;
-      letter-spacing: -1.5px;
-      margin-bottom: 12px;
-    }
-
-    .gradient {
-      background: linear-gradient(90deg,#c4b5fd,#a78bfa,#f0abfc);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      letter-spacing: -1.4px;
+      margin-bottom: 10px;
     }
 
     .subtitle {
       color: var(--pink);
-      font-size: clamp(15px,3vw,19px);
       font-weight: bold;
-      margin-bottom: 17px;
+      font-size: 16px;
+      margin-bottom: 13px;
     }
 
     .intro {
-      max-width: 740px;
-      margin: 0 auto 24px;
-      color: #c7c0d6;
-      font-size: 15px;
+      max-width: 720px;
+      margin: 0 auto;
+      color: #c8c0d7;
+      font-size: 14px;
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin-top: 22px;
+      gap: 11px;
+      margin-top: 21px;
     }
 
     .btn {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       min-height: 46px;
-      padding: 11px 18px;
+      padding: 11px 17px;
       border-radius: 12px;
-      font-size: 13px;
-      font-weight: bold;
       border: 1px solid var(--border);
-      transition: .2s;
+      font-size: 13px;
+      font-weight: 800;
+      transition: transform .2s, filter .2s;
     }
 
-    .btn:hover { transform: translateY(-3px); }
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
 
     .primary {
-      background: linear-gradient(135deg,#8b5cf6,#6d28d9);
+      background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+      border-color: transparent;
+      color: white;
+    }
+
+    .whatsapp {
+      background: var(--green);
+      color: white;
       border-color: transparent;
     }
 
-    .whatsapp { background: var(--green); }
+    .secondary { background: #171322; }
 
-    section {
-      padding: 35px 0;
+    .quick-contact {
+      max-width: 700px;
+      margin: 25px auto 0;
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(24, 17, 39, .8);
     }
 
-    .heading {
+    .quick-contact strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+
+    .quick-contact p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    section { padding: 32px 0; }
+
+    .section-head {
       text-align: center;
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
 
     .eyebrow {
       color: var(--pink);
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
       font-size: 11px;
-      font-weight: bold;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
     }
 
     h2 {
-      font-size: clamp(26px,5vw,36px);
+      font-size: clamp(26px, 5vw, 35px);
       line-height: 1.3;
-      margin: 7px 0;
+      margin: 6px 0;
     }
 
-    .heading p {
+    .section-head > p:last-child {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .notice {
       max-width: 850px;
-      margin: 0 auto 20px;
-      padding: 13px 16px;
-      text-align: center;
-      color: #d8ccef;
-      font-size: 12px;
+      margin: 0 auto 18px;
+      padding: 13px 15px;
       border: 1px solid var(--border);
       border-radius: 12px;
-      background: #151020;
+      background: #171122;
+      color: #d5cbe6;
+      text-align: center;
+      font-size: 12px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(2,minmax(0,1fr));
-      gap: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
     }
 
     .card {
       overflow: hidden;
       border: 1px solid var(--border);
       border-radius: 17px;
-      background: linear-gradient(145deg,#191525,#101018);
-      transition: transform .2s,border-color .2s;
+      background: linear-gradient(145deg, #1b1630, #100e18);
+      transition: transform .2s, border-color .2s;
     }
 
     .card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-3px);
       border-color: #a78bfa;
     }
 
-    .card-top {
-      min-height: 100px;
+    .card-icon {
+      min-height: 94px;
       display: grid;
       place-items: center;
-      background: radial-gradient(circle,#43266f,#20152f 65%,#17121f);
       font-size: 39px;
+      background: radial-gradient(circle, #48286d, #21152f 70%);
     }
 
-    .card-body { padding: 18px; }
+    .card-body { padding: 17px; }
 
     .card h3 {
       font-size: 17px;
+      line-height: 1.45;
       margin-bottom: 8px;
     }
 
     .card p {
       color: var(--muted);
       font-size: 13px;
-      line-height: 1.8;
     }
 
     .tag {
       display: inline-block;
       margin-top: 12px;
       padding: 4px 9px;
-      border-radius: 20px;
+      border-radius: 30px;
       background: #2b1c43;
-      color: #dfd0ff;
+      color: #e2d4ff;
       font-size: 10px;
     }
 
     .card .btn {
-      margin-top: 15px;
+      display: flex;
       width: 100%;
+      margin-top: 14px;
     }
 
     .about-box,
@@ -288,14 +329,20 @@
     .contact-box {
       max-width: 850px;
       margin: auto;
-      padding: 25px;
+      padding: 24px;
       border: 1px solid var(--border);
       border-radius: 19px;
       background: var(--panel);
     }
 
+    .about-box h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
     .about-box p,
-    .shop-box p {
+    .shop-box p,
+    .contact-box p {
       color: var(--muted);
       font-size: 14px;
     }
@@ -303,73 +350,91 @@
     .chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 18px;
+      gap: 8px;
+      margin-top: 16px;
     }
 
     .chip {
-      padding: 6px 11px;
-      background: #251838;
-      border: 1px solid var(--border);
-      color: #e0d2ff;
+      padding: 6px 10px;
       border-radius: 25px;
+      border: 1px solid var(--border);
+      background: #251a38;
+      color: #e1d2ff;
       font-size: 11px;
     }
 
     .shop-box {
       text-align: center;
-      background: radial-gradient(ellipse at top,#321b42,#12121d 75%);
+      background: radial-gradient(ellipse at top, #35204a, #14111f 75%);
     }
 
     .shop-icon {
-      font-size: 52px;
-      margin-bottom: 10px;
+      font-size: 48px;
+      margin-bottom: 6px;
     }
 
     .shop-box h3 {
-      font-size: 24px;
-      margin-bottom: 9px;
+      font-size: 23px;
+      margin-bottom: 7px;
     }
 
     .contact-box {
       text-align: center;
-      background: radial-gradient(ellipse at top,#2c1949,#12121d 75%);
-      padding: 30px 20px;
+      background: radial-gradient(ellipse at top, #2d1b4a, #13101e 75%);
     }
 
     .contact-box p {
-      color: var(--muted);
-      font-size: 14px;
-      margin: 10px auto;
+      max-width: 580px;
+      margin: 8px auto;
     }
 
     footer {
-      margin-top: 25px;
-      padding: 24px 0;
-      text-align: center;
+      margin-top: 24px;
+      padding: 23px 0 85px;
       border-top: 1px solid var(--border);
+      text-align: center;
       color: var(--muted);
       font-size: 12px;
     }
 
-    footer span { color: var(--pink); }
+    footer strong { color: var(--pink); }
 
-    @media(max-width:650px) {
-      .nav { min-height: 62px; }
+    /* Always-visible WhatsApp shortcut */
+    .floating-wa {
+      position: fixed;
+      z-index: 200;
+      right: 16px;
+      bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 40px;
+      background: var(--green);
+      color: white;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 6px 24px #0008;
+    }
+
+    @media (max-width: 650px) {
+      .nav { min-height: 61px; }
       .logo { font-size: 16px; }
       .nav-links { gap: 11px; font-size: 11px; }
       .nav-links .optional { display: none; }
-      .nav-cta { padding: 8px 10px; }
-      .hero { padding-top: 42px; }
-      .avatar { width: 135px; height: 135px; }
+      .nav-links .nav-button { padding: 8px 10px; }
+      .hero { padding-top: 34px; }
+      .avatar { width: 125px; height: 125px; }
       .cards { grid-template-columns: 1fr; }
-      section { padding: 27px 0; }
-      .about-box,.shop-box { padding: 20px; }
+      section { padding: 26px 0; }
+      .card-icon { min-height: 80px; }
+      .about-box, .shop-box, .contact-box { padding: 19px; }
+      .floating-wa { right: 12px; bottom: 12px; }
     }
 
-    @media(prefers-reduced-motion:reduce) {
-      *,*::before,*::after {
-        animation-duration: .01ms !important;
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
         scroll-behavior: auto !important;
         transition-duration: .01ms !important;
       }
@@ -379,111 +444,119 @@
 
 <body>
   <header>
-    <nav class="container nav">
+    <nav class="container nav" aria-label="Main navigation">
       <a class="logo" href="#home">RAIYAAN<span>.</span></a>
 
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a class="optional" href="#shop">Clothing</a>
-        <a class="nav-cta" href="#contact">Contact</a>
+        <a class="optional" href="#shop">Shop</a>
+        <a class="nav-button"
+           href="https://wa.me/c/8801779278590"
+           target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="hero container" id="home">
-      <div class="status">● DIGITAL SERVICES & CLOTHING SHOP</div>
+      <div class="top-label">
+        <span class="dot"></span>
+        DIGITAL SERVICES & CLOTHING
+      </div>
 
       <div class="avatar">
-        <img
-          src="IMG-20261027-WA0214.jpg"
-          alt="Raiyaan Khan"
-          onerror="this.style.opacity='.25';"
-        >
+        <img src="IMG-20261027-WA0214.jpg"
+             alt="Raiyaan Khan profile photo">
       </div>
 
       <h1>Hi, I'm <span class="gradient">Raiyaan Khan</span></h1>
-
-      <p class="subtitle">Online Digital Services Provider</p>
+      <p class="subtitle">Digital Services • Online Work • Clothing Shop</p>
 
       <p class="intro">
-        Facebook ও Instagram অ্যাকাউন্ট সংক্রান্ত সহায়তা,
-        Meta Verified / Blue Verification-এর তথ্য ও গাইডলাইন,
-        Locked, Disabled এবং Suspended Account-এর official
-        recovery ও appeal guidance সহ বিভিন্ন অনলাইন সার্ভিসে
-        সহযোগিতা করি। পাশাপাশি আমার একটি জামা-কাপড়ের দোকানও রয়েছে।
+        আসসালামু আলাইকুম! আমি Raiyaan Khan। Facebook ও Instagram
+        অ্যাকাউন্টের বিভিন্ন সমস্যার official recovery guidance,
+        Meta Verified সম্পর্কে তথ্য এবং বিভিন্ন অনলাইন সার্ভিস নিয়ে
+        কাজ করি। পাশাপাশি আমার রয়েছে একটি জামা-কাপড়ের দোকান।
+        আমার সার্ভিস বা পোশাকের ক্যাটালগ দেখতে নিচের WhatsApp বাটনে
+        ক্লিক করুন।
       </p>
 
       <div class="buttons">
-        <a class="btn primary" href="#services">✦ সকল সার্ভিস দেখুন</a>
         <a class="btn whatsapp"
            href="https://wa.me/c/8801779278590"
            target="_blank" rel="noopener noreferrer">
-          WhatsApp Catalogue ↗
+          🟢 WhatsApp Catalogue দেখুন
         </a>
+
+        <a class="btn primary" href="#services">
+          ✦ আমার সার্ভিসগুলো
+        </a>
+      </div>
+
+      <div class="quick-contact">
+        <strong>📲 যোগাযোগ করতে নিচে যেতে হবে না!</strong>
+        <p>উপরের WhatsApp বাটন অথবা স্ক্রিনের নিচের সবুজ বাটনে চাপ দিন।</p>
       </div>
     </section>
 
     <section class="container" id="services">
-      <div class="heading">
+      <div class="section-head">
         <p class="eyebrow">What I Offer</p>
-        <h2>আমার <span class="gradient">অনলাইন সার্ভিস</span></h2>
-        <p>আপনার প্রয়োজন অনুযায়ী বিভিন্ন ডিজিটাল সেবায় সহযোগিতা।</p>
+        <h2>আমার <span class="gradient">অনলাইন সার্ভিসসমূহ</span></h2>
+        <p>আপনার প্রয়োজন অনুযায়ী সার্ভিস সম্পর্কে জানতে যোগাযোগ করুন।</p>
       </div>
 
       <div class="notice">
-        গুরুত্বপূর্ণ: Account recovery ও verification Meta/Instagram-এর
-        নিজস্ব সিদ্ধান্তের ওপর নির্ভরশীল। কোনো ফলাফল নিশ্চিত নয়।
-        আমি official process, eligibility ও appeal guidance-এ সহায়তা করি।
+        নোট: Account recovery, appeal ও verification-এর ফলাফল
+        Facebook/Instagram-এর সিদ্ধান্তের ওপর নির্ভর করে।
+        কোনো অ্যাকাউন্ট ফেরত পাওয়া বা verification নিশ্চিত নয়।
       </div>
 
       <div class="cards">
         <article class="card">
-          <div class="card-top">🔵</div>
+          <div class="card-icon">🔵</div>
           <div class="card-body">
             <h3>Facebook Blue Verification</h3>
             <p>
-              Meta Verified ও Facebook verification সম্পর্কে তথ্য,
-              যোগ্যতা, subscription এবং official application process
-              বুঝতে সহায়তা।
+              Meta Verified, eligibility, subscription এবং official
+              verification process সম্পর্কে তথ্য ও গাইডলাইন।
             </p>
             <span class="tag">META VERIFIED GUIDANCE</span>
             <a class="btn primary"
                href="https://wa.me/c/8801779278590"
                target="_blank" rel="noopener noreferrer">
-              বিস্তারিত জানতে যোগাযোগ করুন ↗
+              বিস্তারিত জানতে ↗
             </a>
           </div>
         </article>
 
         <article class="card">
-          <div class="card-top">🔓</div>
+          <div class="card-icon">🔓</div>
           <div class="card-body">
             <h3>Facebook Locked Account</h3>
             <p>
-              Facebook account locked হলে official identity confirmation,
-              security checks এবং recovery steps বুঝতে সহায়তা।
+              Facebook account locked হলে security check, identity
+              confirmation ও official recovery steps বুঝতে সহায়তা।
             </p>
-            <span class="tag">ACCOUNT RECOVERY GUIDANCE</span>
+            <span class="tag">LOCKED ACCOUNT GUIDANCE</span>
             <a class="btn primary"
                href="https://wa.me/c/8801779278590"
                target="_blank" rel="noopener noreferrer">
-              সাহায্যের জন্য যোগাযোগ করুন ↗
+              সাহায্য সম্পর্কে জানুন ↗
             </a>
           </div>
         </article>
 
         <article class="card">
-          <div class="card-top">🛡️</div>
+          <div class="card-icon">🛡️</div>
           <div class="card-body">
             <h3>Facebook Disabled / Suspended</h3>
             <p>
-              Disabled বা suspended account-এর ক্ষেত্রে official appeal,
-              review request এবং উপলব্ধ recovery options সম্পর্কে
-              গাইডলাইন।
+              Disabled বা suspended account-এর official appeal,
+              review request এবং available options সম্পর্কে গাইডলাইন।
             </p>
-            <span class="tag">APPEAL SUPPORT</span>
+            <span class="tag">APPEAL GUIDANCE</span>
             <a class="btn primary"
                href="https://wa.me/c/8801779278590"
                target="_blank" rel="noopener noreferrer">
@@ -493,14 +566,15 @@
         </article>
 
         <article class="card">
-          <div class="card-top">📸</div>
+          <div class="card-icon">📸</div>
           <div class="card-body">
-            <h3>Instagram Disabled / Suspended</h3>
+            <h3>Instagram Account Recovery</h3>
             <p>
-              Instagram account disabled বা suspended হলে official
-              appeal options, verification steps এবং recovery guidance।
+              Instagram disabled বা suspended হলে official appeal,
+              identity verification এবং recovery options সম্পর্কে
+              সহায়তা।
             </p>
-            <span class="tag">INSTAGRAM SUPPORT</span>
+            <span class="tag">INSTAGRAM GUIDANCE</span>
             <a class="btn primary"
                href="https://wa.me/c/8801779278590"
                target="_blank" rel="noopener noreferrer">
@@ -510,32 +584,32 @@
         </article>
 
         <article class="card">
-          <div class="card-top">📱</div>
+          <div class="card-icon">📱</div>
           <div class="card-body">
-            <h3>অন্যান্য Social Media Services</h3>
+            <h3>Social Media Support</h3>
             <p>
-              Social media account settings, security guidance,
-              profile-related support এবং অন্যান্য অনলাইন কাজের
-              বিষয়ে জানতে যোগাযোগ করুন।
+              Social media settings, profile-related assistance,
+              account security এবং অন্যান্য social media বিষয়ে
+              সার্ভিসের তথ্য জানতে পারবেন।
             </p>
-            <span class="tag">DIGITAL SERVICES</span>
+            <span class="tag">SOCIAL MEDIA</span>
             <a class="btn primary"
                href="https://wa.me/c/8801779278590"
                target="_blank" rel="noopener noreferrer">
-              সার্ভিস সম্পর্কে জানুন ↗
+              বিস্তারিত জানুন ↗
             </a>
           </div>
         </article>
 
         <article class="card">
-          <div class="card-top">💻</div>
+          <div class="card-icon">💻</div>
           <div class="card-body">
             <h3>অন্যান্য অনলাইন কাজ</h3>
             <p>
-              আপনার প্রয়োজনীয় অনলাইন কাজের ধরন জানিয়ে দিন।
-              কীভাবে সাহায্য করা সম্ভব, তা আলোচনা করে নেওয়া যাবে।
+              আপনার প্রয়োজনীয় অনলাইন কাজের বিবরণ জানান।
+              কাজটি করা সম্ভব কি না, তা আলোচনা করে নেওয়া যাবে।
             </p>
-            <span class="tag">ONLINE WORK</span>
+            <span class="tag">DIGITAL SERVICES</span>
             <a class="btn primary"
                href="https://wa.me/c/8801779278590"
                target="_blank" rel="noopener noreferrer">
@@ -547,54 +621,52 @@
     </section>
 
     <section class="container" id="about">
-      <div class="heading">
+      <div class="section-head">
         <p class="eyebrow">About Me</p>
-        <h2>আমার সম্পর্কে</h2>
-        <p>ডিজিটাল সার্ভিস এবং ব্যবসা—দুই ক্ষেত্রেই আমার কাজ।</p>
+        <h2>আমার <span class="gradient">সম্পর্কে</span></h2>
       </div>
 
       <div class="about-box">
-        <h3>আসসালামু আলাইকুম! 👋</h3>
+        <h3>স্বাগতম! আমি Raiyaan Khan 👋</h3>
         <p>
-          আমি Raiyaan Khan। অনলাইনভিত্তিক বিভিন্ন সার্ভিস নিয়ে কাজ করি।
+          আমি অনলাইনভিত্তিক বিভিন্ন ডিজিটাল সার্ভিস নিয়ে কাজ করি।
           Facebook ও Instagram account-related সমস্যার official
-          সমাধান প্রক্রিয়া সম্পর্কে গাইড করি এবং Meta Verified সম্পর্কে
-          তথ্য দিয়ে থাকি। এর পাশাপাশি আমার একটি পোশাকের দোকান রয়েছে।
-          সার্ভিসের বিস্তারিত, কাজের ধরন ও পোশাকের ক্যাটালগ দেখতে
-          WhatsApp-এর মাধ্যমে যোগাযোগ করতে পারেন।
+          recovery process এবং Meta Verified সম্পর্কে গাইডলাইন দিই।
+          এর পাশাপাশি আমার একটি জামা-কাপড়ের ব্যবসা রয়েছে।
+          সার্ভিসের বিস্তারিত অথবা পোশাকের ক্যাটালগের জন্য WhatsApp-এ
+          যোগাযোগ করতে পারেন।
         </p>
 
         <div class="chips">
           <span class="chip">🔵 Meta Verified Guidance</span>
           <span class="chip">🔓 Account Recovery Guidance</span>
-          <span class="chip">📱 Social Media Support</span>
+          <span class="chip">📸 Instagram Support</span>
           <span class="chip">💻 Online Services</span>
-          <span class="chip">👕 Clothing Shop</span>
+          <span class="chip">👕 Clothing Business</span>
         </div>
       </div>
     </section>
 
     <section class="container" id="shop">
-      <div class="heading">
-        <p class="eyebrow">My Clothing Business</p>
-        <h2>👕 আমার <span class="gradient">জামা-কাপড়ের দোকান</span></h2>
-        <p>পোশাকের ক্যাটালগ দেখতে WhatsApp-এ ভিজিট করুন।</p>
+      <div class="section-head">
+        <p class="eyebrow">My Business</p>
+        <h2>👕 আমার <span class="gradient">জামা-কাপড়ের দোকান</span></h2>
+        <p>পোশাকের কালেকশন দেখতে WhatsApp Catalogue খুলুন।</p>
       </div>
 
       <div class="shop-box">
-        <div class="shop-icon">👔 👕 🛍️</div>
+        <div class="shop-icon">👕 🛍️ 👔</div>
         <h3>Clothing Collection</h3>
         <p>
-          আমার পোশাকের দোকানের ক্যাটালগ দেখতে নিচের বাটনে ক্লিক করুন।
-          পছন্দের পোশাক, দাম ও অর্ডার সম্পর্কে বিস্তারিত জানতে
-          WhatsApp-এ যোগাযোগ করুন।
+          আমার দোকানের পোশাকের কালেকশন দেখতে, পছন্দের পোশাক সম্পর্কে
+          জানতে এবং অর্ডার নিয়ে কথা বলতে WhatsApp Catalogue-এ ভিজিট করুন।
         </p>
 
         <div class="buttons">
           <a class="btn whatsapp"
              href="https://wa.me/c/8801779278590"
              target="_blank" rel="noopener noreferrer">
-            🛍️ View WhatsApp Catalogue ↗
+            🛍️ পোশাকের ক্যাটালগ দেখুন ↗
           </a>
         </div>
       </div>
@@ -602,18 +674,18 @@
 
     <section class="container" id="contact">
       <div class="contact-box">
-        <p class="eyebrow">Let's Connect</p>
-        <h2>কোনো সার্ভিস প্রয়োজন?</h2>
+        <p class="eyebrow">Contact Me</p>
+        <h2>চলুন <span class="gradient">কথা বলি!</span></h2>
         <p>
-          আপনার প্রয়োজনীয় কাজের বিবরণ WhatsApp-এ জানান।
-          সার্ভিস ও পোশাকের ক্যাটালগ—দুটোর জন্যই যোগাযোগ করতে পারেন।
+          ডিজিটাল সার্ভিস হোক কিংবা পোশাকের কালেকশন—আপনার প্রয়োজন
+          জানাতে WhatsApp-এ যোগাযোগ করুন।
         </p>
 
         <div class="buttons">
           <a class="btn whatsapp"
              href="https://wa.me/c/8801779278590"
              target="_blank" rel="noopener noreferrer">
-            WhatsApp-এ যোগাযোগ করুন ↗
+            🟢 WhatsApp Catalogue খুলুন ↗
           </a>
         </div>
       </div>
@@ -622,11 +694,18 @@
 
   <footer>
     <div class="container">
-      © <span id="year"></span> <span>Raiyaan Khan</span>.
+      © <span id="year"></span> <strong>Raiyaan Khan</strong>.
       All Rights Reserved.
-      <p>Independent digital services provider.</p>
+      <p>Digital Services & Clothing Business</p>
     </div>
   </footer>
+
+  <a class="floating-wa"
+     href="https://wa.me/c/8801779278590"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Open WhatsApp Catalogue">
+    🟢 WhatsApp
+  </a>
 
   <script>
     document.getElementById("year").textContent =
